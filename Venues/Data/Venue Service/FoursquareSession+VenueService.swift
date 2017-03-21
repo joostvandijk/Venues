@@ -10,7 +10,7 @@ import Foundation
 import Foursquare
 import CoreLocation
 
-extension Session: VenueService {
+extension Foursquare.Session: VenueService {
     
     /// Requests venues near a given location.
     ///
