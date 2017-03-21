@@ -1,0 +1,116 @@
+{
+  "id": "4bc9e90f937ca5939993a692",
+  "name": "De Oude Herbergh",
+  "contact": {
+    "phone": "+31263333274",
+    "formattedPhone": "+31 26 333 3274",
+    "twitter": "Oudeherbergh",
+    "facebook": "176906125794482",
+    "facebookUsername": "DeOudeHerbergh",
+    "facebookName": "De Oude Herbergh"
+  },
+  "location": {
+    "address": "Utrechtseweg 245",
+    "crossStreet": "Valkenburglaan",
+    "lat": 51.98701738076105,
+    "lng": 5.821182886768505,
+    "labeledLatLngs": [
+      {
+        "label": "display",
+        "lat": 51.98701738076105,
+        "lng": 5.821182886768505
+      }
+    ],
+    "distance": 1980,
+    "postalCode": "6862 AK",
+    "cc": "NL",
+    "city": "Oosterbeek",
+    "state": "Gelderland",
+    "country": "Nederland",
+    "formattedAddress": [
+      "Utrechtseweg 245 (Valkenburglaan)",
+      "6862 AK Oosterbeek",
+      "Nederland"
+    ]
+  },
+  "categories": [
+    {
+      "id": "4bf58dd8d48988d1c4941735",
+      "name": "Restaurant",
+      "pluralName": "Restaurants",
+      "shortName": "Restaurant",
+      "icon": {
+        "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+        "suffix": ".png"
+      },
+      "primary": true
+    }
+  ],
+  "verified": false,
+  "stats": {
+    "checkinsCount": 633,
+    "usersCount": 227,
+    "tipCount": 8
+  },
+  "url": "http://oudeherbergh-oosterbeek.nl",
+  "price": {
+    "tier": 2,
+    "message": "Moderate",
+    "currency": "€"
+  },
+  "rating": 7.8,
+  "ratingColor": "C5DE35",
+  "ratingSignals": 14,
+  "menu": {
+    "type": "Menu",
+    "label": "Menu",
+    "anchor": "View Menu",
+    "url": "http://www.oudeherbergh-oosterbeek.nl/uploads/menukaart.pdf",
+    "mobileUrl": "http://www.oudeherbergh-oosterbeek.nl/uploads/menukaart.pdf",
+    "externalUrl": "http://www.oudeherbergh-oosterbeek.nl/uploads/menukaart.pdf"
+  },
+  "allowMenuUrlEdit": true,
+  "beenHere": {
+    "count": 0,
+    "marked": false,
+    "lastCheckinExpiredAt": 0
+  },
+  "hours": {
+    "status": "Closed until 10:00 AM Thursday",
+    "isOpen": false,
+    "isLocalHoliday": false
+  },
+  "photos": {
+    "count": 0,
+    "groups": []
+  },
+  "hereNow": {
+    "count": 0,
+    "summary": "Nobody here",
+    "groups": []
+  },
+  "featuredPhotos": {
+    "count": 1,
+    "items": [
+      {
+        "id": "588238f3ca10705c93d64d63",
+        "createdAt": 1484929267,
+        "prefix": "https://igx.4sqi.net/img/general/",
+        "suffix": "/57214473_cKL9V8yTcZO6FuKVTYdMXD4nwz1E08Wu7C3RlcgJU4I.jpg",
+        "width": 1440,
+        "height": 1920,
+        "user": {
+          "id": "57214473",
+          "firstName": "Jarmine",
+          "lastName": "Curwen",
+          "gender": "male",
+          "photo": {
+            "prefix": "https://igx.4sqi.net/img/user/",
+            "suffix": "/57214473_r7HnzGnm_qDw2FtoeasnCTAmN485jiVx3FJmyqg2x78rwsWQhkClWPUku8C-IssrHKKQSl582.jpg"
+          }
+        },
+        "visibility": "public"
+      }
+    ]
+  }
+}
