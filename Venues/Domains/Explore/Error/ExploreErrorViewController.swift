@@ -43,6 +43,8 @@ fileprivate class ExploreErrorView: UIView {
         backgroundColor = UIColor.white
         
         addSubview(label)
+        
+        configureConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,14 +53,11 @@ fileprivate class ExploreErrorView: UIView {
     
     // MARK: Layout
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
+    private func configureConstraints() {
+        let constraints = [label.centerXAnchor.constraint(equalTo: centerXAnchor),
+                           label.centerYAnchor.constraint(equalTo: centerYAnchor)]
         
-        var labelFrame = CGRect.zero
-        labelFrame.size = label.sizeThatFits(bounds.insetBy(dx: 80.0, dy: 80.0).size)
-        labelFrame.origin.x = round(bounds.midX - labelFrame.size.width / 2.0)
-        labelFrame.origin.y = round(bounds.midY - labelFrame.size.height / 2.0)
-        label.frame = labelFrame
+        NSLayoutConstraint.activate(constraints)
     }
     
     // MARK: Label
@@ -67,6 +66,7 @@ fileprivate class ExploreErrorView: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.attributedText = self.newLabelAttributedText(title: "Oops!", subtitle: "An error occurred.")
+        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
