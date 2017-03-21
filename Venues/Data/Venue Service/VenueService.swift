@@ -20,7 +20,7 @@ public protocol VenueService {
     /// - Parameters:
     ///   - location: The location to search for nearby venues.
     ///   - offset: The offset of the returned venues, used to paginate to a new set of venues.
-    ///   - completionHandler: The completion handler to invoke when the
+    ///   - completionHandler: The completion handler to invoke when the request is completed.
     func requestVenues(near location: CLLocation, offset: Int?, completionHandler: @escaping CompletionHandler<Venues>)
     
 }
