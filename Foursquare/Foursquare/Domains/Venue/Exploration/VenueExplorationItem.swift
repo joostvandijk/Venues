@@ -17,10 +17,10 @@ public extension VenueExploration {
         public let venue: Venue
         
         /// An array of reasons describing why the item was returned.
-        public let reasons: [Reason]
+        public let reasons: [Reason]?
         
         /// An array of tips that have been written about the embedded venue.
-        public let tips: [Tip]
+        public let tips: [Tip]?
         
         /// Initializes the venue exploration item.
         ///
@@ -28,8 +28,8 @@ public extension VenueExploration {
         /// - Throws: An UnboxError in case an unrecoverable error occurrs.
         public init(unboxer: Unboxer) throws {
             venue = try unboxer.unbox(key: "venue")
-            reasons = unboxer.unbox(keyPath: "reasons.items") ?? []
-            tips = unboxer.unbox(key: "tips") ?? []
+            reasons = unboxer.unbox(keyPath: "reasons.items")
+            tips = unboxer.unbox(key: "tips")
         }
         
     }
