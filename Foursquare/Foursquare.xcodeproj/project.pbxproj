@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82918E91E829A6900BFA980 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82918E81E829A6900BFA980 /* UIColor+Hex.swift */; };
 		C8A028471E8189CA0067BC6C /* VenueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A028461E8189CA0067BC6C /* VenueCategory.swift */; };
 		C8A028491E818E9E0067BC6C /* VenuePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A028481E818E9E0067BC6C /* VenuePhoto.swift */; };
 		C8A0284E1E81CF7D0067BC6C /* VenueLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0284D1E81CF7D0067BC6C /* VenueLocation.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C82918E81E829A6900BFA980 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		C8A028461E8189CA0067BC6C /* VenueCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCategory.swift; sourceTree = "<group>"; };
 		C8A028481E818E9E0067BC6C /* VenuePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuePhoto.swift; sourceTree = "<group>"; };
 		C8A0284D1E81CF7D0067BC6C /* VenueLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueLocation.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				C8F75E531E802F1400DEEE8D /* Unbox.swift */,
+				C82918E81E829A6900BFA980 /* UIColor+Hex.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				C8F75E641E806E0600DEEE8D /* VenueExplorationGroup.swift in Sources */,
 				C8F75E411E80240100DEEE8D /* Response.swift in Sources */,
 				C8F75E661E806E2900DEEE8D /* VenueExplorationItem.swift in Sources */,
+				C82918E91E829A6900BFA980 /* UIColor+Hex.swift in Sources */,
 				C8F75E4D1E80289400DEEE8D /* VenueExploration.swift in Sources */,
 				C8A0284E1E81CF7D0067BC6C /* VenueLocation.swift in Sources */,
 				C8F75E421E80240100DEEE8D /* Result.swift in Sources */,

@@ -20,6 +20,9 @@ public struct Venue: Unboxable {
     /// The rating of the venue, on a scale of 1.0 to 10.0.
     public let rating: Double
     
+    /// The color associated with the venue's rating.
+    public let ratingColor: UIColor
+    
     /// The location of the venue.
     public let location: Location
     
@@ -45,6 +48,9 @@ public struct Venue: Unboxable {
         location = try unboxer.unbox(key: "location")
         categories = try unboxer.unbox(key: "categories")
         featuredPhotos = try unboxer.unbox(keyPath: "featuredPhotos.items")
+        
+        let ratingColorHex: String = try unboxer.unbox(key: "ratingColor")
+        ratingColor = UIColor(hexString: ratingColorHex)
     }
     
 }
