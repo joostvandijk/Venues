@@ -50,6 +50,7 @@ fileprivate extension Venue {
         identifier = item.venue.identifier
         name = item.venue.name
         rating = item.venue.rating
+        ratingColor = item.venue.ratingColor
         distance = item.venue.location.distance
         category = item.venue.categories.first?.name
         url = item.venue.url

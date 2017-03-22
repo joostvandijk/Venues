@@ -105,7 +105,8 @@ extension ExploreTableViewController: UITableViewDataSource {
                                          name: venue.name,
                                          category: venue.category,
                                          distance: formattedDistance,
-                                         rating: venue.rating)
+                                         rating: venue.rating,
+                                         ratingColor: venue.ratingColor)
     }
     
 }

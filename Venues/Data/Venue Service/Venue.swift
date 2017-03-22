@@ -6,7 +6,7 @@
 //  Copyright © 2017 JWVD. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Structure describing a venue.
 public struct Venue {
@@ -22,6 +22,9 @@ public struct Venue {
     
     /// The rating of the venue, on a scale of 1.0 to 10.0.
     public let rating: Double
+    
+    /// The color of the venue's rating.
+    public let ratingColor: UIColor
     
     /// The distance to the venue, in meters.
     public let distance: Double?

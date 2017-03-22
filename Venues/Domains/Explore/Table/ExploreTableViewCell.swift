@@ -51,6 +51,9 @@ public class ExploreTableViewCell: UITableViewCell {
         /// The rating to display.
         public let rating: Double
         
+        /// The color of the rating to display.
+        public let ratingColor: UIColor
+        
     }
     
     /// The data to fill the cell with.
@@ -60,10 +63,12 @@ public class ExploreTableViewCell: UITableViewCell {
                 networkImageView.imageURL = data.imageURL
                 titleLabel.attributedText = newTitleLabelAttributedText(data: data)
                 ratingView.rating = data.rating
+                ratingView.tintColor = data.ratingColor
             } else {
                 networkImageView.imageURL = nil
                 titleLabel.text = nil
                 ratingView.rating = nil
+                ratingView.tintColor = nil
             }
             
             ratingView.sizeToFit()

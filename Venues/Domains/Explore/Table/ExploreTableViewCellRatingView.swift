@@ -46,17 +46,6 @@ public class ExploreTableViewCellRatingView: UIView {
         return NSAttributedString(string: String(rating), attributes: attributes)
     }
     
-    private var fillColor: UIColor? {
-        guard let rating = rating else {
-            return nil
-        }
-        
-        let scaledRating = min(max(CGFloat(rating) - 5.0, 0.0), 5.0)
-        let location = scaledRating / 5.0
-        
-        return UIColor.red.interpolate(to: UIColor.green, location)
-    }
-    
     // MARK: Layout
     
     public override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -84,17 +73,23 @@ public class ExploreTableViewCellRatingView: UIView {
     
     // MARK: Drawing
     
+    override public func tintColorDidChange() {
+        super.tintColorDidChange()
+        
+        setNeedsDisplay()
+    }
+    
     override public func draw(_ rect: CGRect) {
         // Clear the background.
         UIColor.clear.setFill()
         UIRectFill(rect)
         
-        guard let attributedString = self.attributedString, let fillColor = fillColor else {
+        guard let attributedString = self.attributedString else {
             return
         }
         
         // Draw the shape.
-        fillColor.setFill()
+        tintColor.setFill()
         UIBezierPath(roundedRect: rect, cornerRadius: 3.0).fill()
         
         // Draw the text.
