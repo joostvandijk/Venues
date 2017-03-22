@@ -52,7 +52,6 @@ fileprivate extension Venue {
         rating = item.venue.rating
         distance = item.venue.location.distance
         category = item.venue.categories.first?.name
-        tip = item.tips.last?.text
         url = item.venue.url
         
         if let featuredPhoto = item.venue.featuredPhotos.first {

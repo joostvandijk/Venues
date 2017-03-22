@@ -29,9 +29,6 @@ public struct Venue {
     /// The category related to the venue.
     public let category: String?
     
-    /// A tip about the venue, written by a user.
-    public let tip: String?
-    
     /// The URL to the venue on a remote website.
     public let url: URL
     

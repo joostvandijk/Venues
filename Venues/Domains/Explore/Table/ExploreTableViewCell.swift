@@ -18,7 +18,6 @@ public class ExploreTableViewCell: UITableViewCell {
         
         contentView.addSubview(networkImageView)
         contentView.addSubview(titleLabel)
-        contentView.addSubview(subtitleLabel)
         
         configureConstraints()
     }
@@ -50,9 +49,6 @@ public class ExploreTableViewCell: UITableViewCell {
         /// The distance to display.
         public let distance: String?
         
-        /// The tip to display.
-        public let tip: String?
-        
     }
     
     /// The data to fill the cell with.
@@ -61,11 +57,9 @@ public class ExploreTableViewCell: UITableViewCell {
             if let data = data {
                 networkImageView.imageURL = data.imageURL
                 titleLabel.attributedText = newTitleLabelAttributedText(data: data)
-                subtitleLabel.text = data.tip
             } else {
                 networkImageView.imageURL = nil
                 titleLabel.text = nil
-                subtitleLabel.text = nil
             }
         }
     }
@@ -76,17 +70,14 @@ public class ExploreTableViewCell: UITableViewCell {
         let marginsGuide = contentView.layoutMarginsGuide
         let spacing = layoutMargins.left
         
-        let constraints = [networkImageView.topAnchor.constraint(equalTo: marginsGuide.topAnchor),
+        let constraints = [networkImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
                            networkImageView.leadingAnchor.constraint(equalTo: marginsGuide.leadingAnchor),
                            networkImageView.widthAnchor.constraint(equalToConstant: 60.0),
                            networkImageView.heightAnchor.constraint(equalToConstant: 60.0),
-                           titleLabel.centerYAnchor.constraint(equalTo: networkImageView.centerYAnchor),
+                           titleLabel.topAnchor.constraint(equalTo: marginsGuide.topAnchor),
                            titleLabel.leadingAnchor.constraint(equalTo: networkImageView.trailingAnchor, constant: spacing),
                            titleLabel.trailingAnchor.constraint(equalTo: marginsGuide.trailingAnchor),
-                           subtitleLabel.topAnchor.constraint(equalTo: networkImageView.bottomAnchor, constant: spacing),
-                           subtitleLabel.leadingAnchor.constraint(equalTo: marginsGuide.leadingAnchor),
-                           subtitleLabel.trailingAnchor.constraint(equalTo: marginsGuide.trailingAnchor),
-                           subtitleLabel.bottomAnchor.constraint(equalTo: marginsGuide.bottomAnchor)]
+                           titleLabel.bottomAnchor.constraint(equalTo: marginsGuide.bottomAnchor)]
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -134,16 +125,5 @@ public class ExploreTableViewCell: UITableViewCell {
         
         return attributedString
     }
-    
-    // MARK: Subtitle Label
-    
-    private lazy var subtitleLabel: UILabel = {
-        let tipLabel = UILabel()
-        tipLabel.font = UIFont.systemFont(ofSize: 14.0)
-        tipLabel.numberOfLines = 0
-        tipLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        return tipLabel
-    }()
     
 }
