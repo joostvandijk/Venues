@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C82918E01E81E21700BFA980 /* Foursquare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82918DF1E81E21700BFA980 /* Foursquare.framework */; };
 		C82918E11E81E21700BFA980 /* Foursquare.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C82918DF1E81E21700BFA980 /* Foursquare.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C82918E41E828A4900BFA980 /* ExploreTableViewCellRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82918E31E828A4900BFA980 /* ExploreTableViewCellRatingView.swift */; };
+		C82918E71E82902900BFA980 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82918E61E82902900BFA980 /* UIColor+Helpers.swift */; };
 		C8A028381E8163730067BC6C /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A028371E8163730067BC6C /* ExploreTableViewController.swift */; };
 		C8A0283B1E81660F0067BC6C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0283A1E81660F0067BC6C /* ContainerViewController.swift */; };
 		C8A028401E8168340067BC6C /* ExploreLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0283F1E8168340067BC6C /* ExploreLoadingViewController.swift */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		C82918DF1E81E21700BFA980 /* Foursquare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Foursquare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C82918E31E828A4900BFA980 /* ExploreTableViewCellRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCellRatingView.swift; sourceTree = "<group>"; };
+		C82918E61E82902900BFA980 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		C8A028371E8163730067BC6C /* ExploreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		C8A0283A1E81660F0067BC6C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		C8A0283F1E8168340067BC6C /* ExploreLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreLoadingViewController.swift; sourceTree = "<group>"; };
@@ -104,11 +108,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C82918E51E82902000BFA980 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C82918E61E82902900BFA980 /* UIColor+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C8A028361E8163680067BC6C /* Table */ = {
 			isa = PBXGroup;
 			children = (
 				C8A028371E8163730067BC6C /* ExploreTableViewController.swift */,
 				C8A028441E8172D60067BC6C /* ExploreTableViewCell.swift */,
+				C82918E31E828A4900BFA980 /* ExploreTableViewCellRatingView.swift */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -171,6 +184,7 @@
 				C8F75E881E8144F800DEEE8D /* Data */,
 				C8F75DED1E80064500DEEE8D /* Domains */,
 				C8A0284A1E81CB7F0067BC6C /* Views */,
+				C82918E51E82902000BFA980 /* Helpers */,
 				C8F75DF11E80064500DEEE8D /* Resources */,
 			);
 			path = Venues;
@@ -385,11 +399,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A028451E8172D60067BC6C /* ExploreTableViewCell.swift in Sources */,
+				C82918E41E828A4900BFA980 /* ExploreTableViewCellRatingView.swift in Sources */,
 				C8A0284C1E81CB850067BC6C /* NetworkImageView.swift in Sources */,
 				C8F75E9A1E81468400DEEE8D /* UserLocationController.swift in Sources */,
 				C8F75E961E8144F800DEEE8D /* VenueService.swift in Sources */,
 				C8A028431E816A590067BC6C /* ExploreErrorViewController.swift in Sources */,
 				C8F75DF51E80064500DEEE8D /* AppDelegate.swift in Sources */,
+				C82918E71E82902900BFA980 /* UIColor+Helpers.swift in Sources */,
 				C8A028381E8163730067BC6C /* ExploreTableViewController.swift in Sources */,
 				C8F75E931E8144F800DEEE8D /* UserLocationService.swift in Sources */,
 				C8A028401E8168340067BC6C /* ExploreLoadingViewController.swift in Sources */,

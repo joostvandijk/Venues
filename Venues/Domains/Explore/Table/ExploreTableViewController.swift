@@ -104,7 +104,8 @@ extension ExploreTableViewController: UITableViewDataSource {
         return ExploreTableViewCell.Data(imageURL: venue.imageURL,
                                          name: venue.name,
                                          category: venue.category,
-                                         distance: formattedDistance)
+                                         distance: formattedDistance,
+                                         rating: venue.rating)
     }
     
 }

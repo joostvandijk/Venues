@@ -14,10 +14,9 @@ public class ExploreTableViewCell: UITableViewCell {
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        accessoryType = .disclosureIndicator
-        
         contentView.addSubview(networkImageView)
         contentView.addSubview(titleLabel)
+        accessoryView = ratingView
         
         configureConstraints()
     }
@@ -49,6 +48,9 @@ public class ExploreTableViewCell: UITableViewCell {
         /// The distance to display.
         public let distance: String?
         
+        /// The rating to display.
+        public let rating: Double
+        
     }
     
     /// The data to fill the cell with.
@@ -57,10 +59,14 @@ public class ExploreTableViewCell: UITableViewCell {
             if let data = data {
                 networkImageView.imageURL = data.imageURL
                 titleLabel.attributedText = newTitleLabelAttributedText(data: data)
+                ratingView.rating = data.rating
             } else {
                 networkImageView.imageURL = nil
                 titleLabel.text = nil
+                ratingView.rating = nil
             }
+            
+            ratingView.sizeToFit()
         }
     }
     
@@ -125,5 +131,11 @@ public class ExploreTableViewCell: UITableViewCell {
         
         return attributedString
     }
+    
+    // MARK: Rating View
+    
+    private lazy var ratingView: ExploreTableViewCellRatingView = {
+        return ExploreTableViewCellRatingView()
+    }()
     
 }
